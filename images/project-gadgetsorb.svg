@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <defs>
+    <linearGradient id="repairBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="360" fill="url(#repairBg)" />
+
+  <!-- Window Frame -->
+  <rect x="20" y="16" width="560" height="328" rx="12" fill="#090e1a" stroke="#1e293b" stroke-width="1.5" />
+  
+  <!-- Browser Chrome -->
+  <rect x="20" y="16" width="560" height="36" rx="12" fill="#111827" />
+  <circle cx="42" cy="34" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="58" cy="34" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="74" cy="34" r="5" fill="#10b981" opacity="0.8" />
+  <rect x="110" y="24" width="280" height="20" rx="6" fill="#090e1a" />
+  <text x="125" y="38" fill="#64748b" font-family="monospace" font-size="11">gadgetsorb-repairs.vercel.app</text>
+
+  <!-- Content Header -->
+  <g transform="translate(44, 70)">
+    <text x="0" y="18" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="800" letter-spacing="1">GADGETSORB</text>
+    <text x="126" y="18" fill="#94a3b8" font-family="sans-serif" font-size="11">| Certified Device Diagnostics &amp; Parts</text>
+    <rect x="420" y="2" width="90" height="24" rx="12" fill="url(#cyanGrad)" />
+    <text x="432" y="18" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="700">BOOK REPAIR</text>
+  </g>
+
+  <!-- Device Diagnostic Visual (Left) -->
+  <g transform="translate(44, 108)">
+    <!-- Device Frame with Diagnostic Scan Layer -->
+    <rect width="160" height="215" rx="20" fill="url(#phoneGrad)" stroke="#475569" stroke-width="3" />
+    <rect x="10" y="14" width="140" height="187" rx="14" fill="#020617" />
+    <!-- Dynamic Island / Notch -->
+    <rect x="62" y="20" width="36" height="8" rx="4" fill="#1e293b" />
+    
+    <!-- Screen Diagnostic Pulse Grid -->
+    <circle cx="80" cy="100" r="30" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8" />
+    <circle cx="80" cy="100" r="16" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="80" cy="100" r="4" fill="#38bdf8" />
+    <text x="35" y="145" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="600">OLED Screen Check</text>
+    <text x="46" y="162" fill="#10b981" font-family="sans-serif" font-size="10">Status: Replaceable</text>
+  </g>
+
+  <!-- Interactive Repair Matrix / Cards (Right) -->
+  <g transform="translate(225, 108)">
+    <!-- Service Option 1 -->
+    <rect width="330" height="62" rx="8" fill="#131e36" stroke="#1e293b" stroke-width="1" />
+    <circle cx="28" cy="31" r="14" fill="#1e293b" />
+    <text x="21" y="36" fill="#38bdf8" font-family="sans-serif" font-size="13">📱</text>
+    <text x="52" y="28" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="600">iPhone 14 Pro Max Screen Replacement</text>
+    <text x="52" y="46" fill="#94a3b8" font-family="sans-serif" font-size="10">OEM Quality • 45 Min Turnaround • 90-Day Warranty</text>
+    <text x="275" y="36" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="700">$129</text>
+
+    <!-- Service Option 2 -->
+    <g transform="translate(0, 74)">
+      <rect width="330" height="62" rx="8" fill="#131e36" stroke="#1e293b" stroke-width="1" />
+      <circle cx="28" cy="31" r="14" fill="#1e293b" />
+      <text x="21" y="36" fill="#10b981" font-family="sans-serif" font-size="13">🔋</text>
+      <text x="52" y="28" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="600">Genuine High-Capacity Battery Swap</text>
+      <text x="52" y="46" fill="#94a3b8" font-family="sans-serif" font-size="10">100% Health Restored • Certified Cycle Calibration</text>
+      <text x="282" y="36" fill="#10b981" font-family="sans-serif" font-size="13" font-weight="700">$59</text>
+    </g>
+
+    <!-- Accessories Showcase row -->
+    <g transform="translate(0, 148)">
+      <rect width="330" height="67" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" stroke-dasharray="4 2" />
+      <text x="16" y="22" fill="#cbd5e1" font-family="sans-serif" font-size="11" font-weight="600">Featured Accessories in Stock</text>
+      <rect x="16" y="32" width="90" height="24" rx="4" fill="#1e293b" />
+      <text x="26" y="48" fill="#94a3b8" font-family="sans-serif" font-size="10">MagSafe Cases</text>
+      <rect x="114" y="32" width="105" height="24" rx="4" fill="#1e293b" />
+      <text x="122" y="48" fill="#94a3b8" font-family="sans-serif" font-size="10">20W Fast Chargers</text>
+      <rect x="227" y="32" width="88" height="24" rx="4" fill="#1e293b" />
+      <text x="237" y="48" fill="#94a3b8" font-family="sans-serif" font-size="10">Privacy Glass</text>
+    </g>
+  </g>
+</svg>

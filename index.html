@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Adediran Adeyinka — Frontend Developer Portfolio</title>
+  <meta name="title" content="Adediran Adeyinka — Frontend Developer Portfolio">
+  <meta name="description" content="Professional portfolio of Adediran Adeyinka, a Frontend Developer crafting modern, responsive, and performance-driven web applications with clean HTML5, CSS3, and JavaScript.">
+  <meta name="keywords" content="Adediran Adeyinka, Frontend Developer, Web Developer, JavaScript Developer, HTML5, CSS3, Portfolio, Responsive Design">
+  <meta name="author" content="Adediran Adeyinka">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adeyinka-dev.vercel.app/">
+  <meta property="og:title" content="Adediran Adeyinka — Frontend Developer Portfolio">
+  <meta property="og:description" content="Building responsive web interfaces that turn concepts into high-performing digital experiences. Explore featured projects, case studies, and technical skills.">
+  <meta property="og:image" content="/images/project-bank.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adediran Adeyinka — Frontend Developer">
+  <meta name="twitter:description" content="Professional Frontend Developer portfolio showcasing modern responsive projects, case studies, and skills.">
+  <meta name="twitter:image" content="/images/project-bank.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/favicon.svg">
+
+  <!-- Font Awesome CDN for clean, standard icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteUpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Vanilla CSS Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Inline theme initializer to avoid any theme flicker -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('portfolio-theme');
+        var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Skip to content for keyboard accessibility -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       STICKY NAVBAR
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Adediran Adeyinka Homepage">
+        <div class="brand-badge">AA</div>
+        <span>Adeyinka<span style="color: var(--accent-cyan);">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#value" class="nav-link">Why Me</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Interactive Theme Switch Pill & CTA) -->
+      <div class="nav-actions">
+        <button class="theme-switch-pill" id="themeToggleBtn" type="button" aria-label="Switch between dark and light mode" title="Toggle theme (Light/Dark)">
+          <span class="theme-pill-track" aria-hidden="true">
+            <span class="theme-pill-icon moon-icon"><i class="fa-solid fa-moon"></i></span>
+            <span class="theme-pill-icon sun-icon"><i class="fa-solid fa-sun"></i></span>
+            <span class="theme-pill-thumb"></span>
+          </span>
+          <span class="theme-pill-text" id="themePillLabel">Dark</span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm" id="navHireMeBtn">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" type="button" aria-label="Open mobile navigation menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation Menu">
+    <div>
+      <div class="mobile-nav-header">
+        <div class="brand-logo">
+          <div class="brand-badge">AA</div>
+          <span>Adeyinka</span>
+        </div>
+        <button class="mobile-nav-close" id="mobileCloseBtn" type="button" aria-label="Close navigation menu">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#value" class="nav-link">Why Me</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Mobile Theme Selector -->
+      <div class="mobile-theme-section">
+        <span class="mobile-theme-label"><i class="fa-solid fa-circle-half-stroke"></i> Theme Mode</span>
+        <div class="theme-segmented-control" role="radiogroup" aria-label="Select Theme Mode">
+          <button type="button" class="theme-segment-btn active" id="mobileThemeDarkBtn" aria-label="Switch to dark theme">
+            <i class="fa-solid fa-moon"></i>
+            <span>Dark</span>
+          </button>
+          <button type="button" class="theme-segment-btn" id="mobileThemeLightBtn" aria-label="Switch to light theme">
+            <i class="fa-solid fa-sun"></i>
+            <span>Light</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">
+        <span>Get in Touch</span>
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN CONTENT WRAPPER
+       ======================================================================== -->
+  <main id="mainContent">
+
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="section hero-section" id="home">
+      <div class="hero-glow-bg" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content reveal-fade-up">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for Full-Time &amp; Freelance Opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight-text">Adediran Adeyinka</span>
+          </h1>
+
+          <div class="hero-role">
+            <span>Frontend Developer &amp; UI Specialist</span>
+          </div>
+
+          <p class="hero-tagline">
+            Building responsive, accessible web interfaces that turn concepts into high-performing digital experiences. Committed to clean code, smooth interactions, and thoughtful user experiences.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Featured Projects</span>
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="hero-social-strip">
+            <span class="hero-social-label">Connect:</span>
+            <div class="hero-social-icons">
+              <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:adediranadeyinkaabdulquyum@gmail.com" class="hero-social-link" aria-label="Direct Email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-fade-up">
+          <div class="hero-card">
+            <div class="avatar-wrapper">
+              <img src="/images/profile-avatar.svg" alt="Portrait illustration of frontend developer Adediran Adeyinka" width="380" height="380" />
+            </div>
+            <div class="hero-card-meta">
+              <div class="meta-item">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">Nigeria • Remote</span>
+              </div>
+              <div class="meta-item" style="text-align: right;">
+                <span class="meta-label">Primary Stack</span>
+                <span class="meta-value">HTML5 / CSS3 / JS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Ticker Bar -->
+    <div class="tech-ticker-section">
+      <div class="container ticker-wrapper">
+        <div class="ticker-item"><i class="fa-brands fa-html5"></i> Semantic HTML5</div>
+        <div class="ticker-item"><i class="fa-brands fa-css3-alt"></i> Modern CSS3 &amp; Flexbox/Grid</div>
+        <div class="ticker-item"><i class="fa-brands fa-js"></i> Vanilla JavaScript (ES6+)</div>
+        <div class="ticker-item"><i class="fa-solid fa-mobile-screen"></i> Responsive Design</div>
+        <div class="ticker-item"><i class="fa-brands fa-git-alt"></i> Git &amp; Version Control</div>
+        <div class="ticker-item"><i class="fa-brands fa-figma"></i> Figma to Pixel-Perfect Code</div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         ABOUT ME SECTION
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <div class="section-badge"><i class="fa-solid fa-user"></i> Background</div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-description">A dedicated frontend developer focused on writing clean, scalable code and delivering seamless web experiences.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative reveal-fade-up">
+            <p>
+              I am a <strong>Frontend Developer</strong> with a solid foundation in building modern, responsive, and performance-minded web applications. I take pride in transforming design mockups and creative wireframes into intuitive, accessible digital products that look great on any device.
+            </p>
+            <p>
+              My core technical toolkit revolves around <strong>HTML5, CSS3, and modern JavaScript</strong>. I prioritize semantic architecture, modular stylesheets, and lightweight JavaScript interactions that don't burden users with excessive bundle weight or sluggish load times.
+            </p>
+            <p>
+              Whether developing business landing pages, e-commerce storefronts, or interactive web utilities, I maintain a disciplined workflow: writing maintainable code, debugging methodically, and testing thoroughly across mobile, tablet, and desktop viewports.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <i class="fa-solid fa-laptop-code highlight-icon"></i>
+                <h4>Clean Architecture</h4>
+                <p>Organized, semantic code that is easy to read, maintain, and scale.</p>
+              </div>
+              <div class="highlight-box">
+                <i class="fa-solid fa-bolt-lightning highlight-icon"></i>
+                <h4>Performance First</h4>
+                <p>Fast-loading assets and optimized DOM manipulation without bloat.</p>
+              </div>
+              <div class="highlight-box">
+                <i class="fa-solid fa-arrows-split-up-and-left highlight-icon"></i>
+                <h4>Responsive By Default</h4>
+                <p>Mobile-first layouts tested across real-world screen dimensions.</p>
+              </div>
+              <div class="highlight-box">
+                <i class="fa-solid fa-graduation-cap highlight-icon"></i>
+                <h4>Continuous Growth</h4>
+                <p>Constantly expanding capabilities and keeping up with web standards.</p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#contact" class="btn btn-primary">
+                <span>Discuss an Opportunity</span>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Code Snapshot Terminal Visual -->
+          <div class="code-window-card reveal-fade-up">
+            <div class="code-window-header">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="window-title">developer_profile.js</span>
+              <span style="font-size: 0.75rem; color: var(--text-faint);">UTF-8</span>
+            </div>
+            <pre class="code-window-body"><code><span class="code-comment">// Technical Profile &amp; Core Attributes</span>
+<span class="code-keyword">const</span> <span class="code-prop">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Adediran Adeyinka"</span>,
+  <span class="code-prop">title</span>: <span class="code-string">"Frontend Developer"</span>,
+  <span class="code-prop">location</span>: <span class="code-string">"Oyo State, Nigeria (Open to Remote)"</span>,
+  <span class="code-prop">focusAreas</span>: [
+    <span class="code-string">"Responsive Web Interfaces"</span>,
+    <span class="code-string">"DOM Architecture &amp; UI Logic"</span>,
+    <span class="code-string">"Cross-Browser Compatibility"</span>,
+    <span class="code-string">"Web Accessibility (a11y)"</span>
+  ],
+  <span class="code-prop">strengths</span>: {
+    <span class="code-prop">cleanCode</span>: <span class="code-keyword">true</span>,
+    <span class="code-prop">mobileFirst</span>: <span class="code-keyword">true</span>,
+    <span class="code-prop">curiosityToLearn</span>: <span class="code-string">"Continuous"</span>
+  },
+  <span class="code-prop">currentGoal</span>: <span class="code-string">"Joining an engineering team to build impactful web products"</span>
+};
+
+<span class="code-comment">// Ready to collaborate!</span>
+<span class="code-prop">console</span>.<span class="code-prop">log</span>(<span class="code-string">`Status: ${developer.currentGoal}`</span>);</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURED PROJECTS SECTION
+         ====================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <div class="section-badge"><i class="fa-solid fa-code"></i> Portfolio</div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">A curated selection of real projects demonstrating UI engineering, responsive design, and vanilla JavaScript functionality.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="project-filter-bar reveal-fade-up" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" type="button">All Projects</button>
+          <button class="filter-btn" data-filter="web-app" type="button">Web Applications</button>
+          <button class="filter-btn" data-filter="landing-page" type="button">Landing Pages</button>
+          <button class="filter-btn" data-filter="ui-ux" type="button">UI / E-Commerce</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1: Dynasty Fashion Designer -->
+          <article class="project-card reveal-fade-up" data-category="ui-ux landing-page" id="project-dynasty">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">Women's Haute Couture</span>
+              <img src="/images/project-dynasty.jpg" alt="Dynasty Fashion Closet luxury women's fashion collection" loading="lazy" width="600" height="360" referrerPolicy="no-referrer" />
+            </div>
+            <div class="project-content-box">
+              <h3 class="project-title">Dynasty Fashion Closet</h3>
+              <p class="project-description">
+                A bespoke digital storefront for an elegant women's haute couture brand. Emphasizes clean editorial typography, curated lookbooks, responsive garment grids, and an uncluttered luxury shopping aesthetic.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3 Flexbox</span>
+                <span class="tech-tag">Vanilla JS</span>
+                <span class="tech-tag">Responsive UI</span>
+              </div>
+              <div class="project-action-bar">
+                <div class="project-links">
+                  <a href="https://dynasty-fashion-designer.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="Live demo for Dynasty Fashion">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>Live Demo</span>
+                  </a>
+                  <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="GitHub code for Dynasty Fashion">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Code</span>
+                  </a>
+                </div>
+                <button class="btn btn-sm project-btn-details" data-case-study="dynasty" type="button">
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span>Case Study</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Digital Bank Landing Page -->
+          <article class="project-card reveal-fade-up" data-category="landing-page web-app" id="project-bank">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">Fintech Interface</span>
+              <img src="/images/project-bank.jpg" alt="Digital Bank modern fintech dashboard and card preview" loading="lazy" width="600" height="360" referrerPolicy="no-referrer" />
+            </div>
+            <div class="project-content-box">
+              <h3 class="project-title">Digital Bank Landing Page</h3>
+              <p class="project-description">
+                A conversion-focused landing page for a next-generation banking service. Features interactive financial card previews, spending analytics charts, security tiers, and clean mobile responsiveness.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5 Semantic</span>
+                <span class="tech-tag">Modern CSS3</span>
+                <span class="tech-tag">Vanilla JavaScript</span>
+                <span class="tech-tag">A11y Standards</span>
+              </div>
+              <div class="project-action-bar">
+                <div class="project-links">
+                  <a href="https://digital-landing-page-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="Live demo for Digital Bank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>Live Demo</span>
+                  </a>
+                  <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="GitHub code for Digital Bank">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Code</span>
+                  </a>
+                </div>
+                <button class="btn btn-sm project-btn-details" data-case-study="bank" type="button">
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span>Case Study</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Gadgetsorb iPhone Repair & Accessories -->
+          <article class="project-card reveal-fade-up" data-category="ui-ux web-app" id="project-gadgetsorb">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">Service &amp; Booking</span>
+              <img src="/images/project-gadgetsorb.svg" alt="Gadgetsorb iPhone Repair website preview" loading="lazy" width="600" height="360" />
+            </div>
+            <div class="project-content-box">
+              <h3 class="project-title">Gadgetsorb — Device Repair</h3>
+              <p class="project-description">
+                A comprehensive service platform and accessories catalog for an electronics repair specialist. Features dynamic model diagnostic selections, transparent pricing breakdowns, and direct inquiry forms.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript DOM</span>
+                <span class="tech-tag">Form Validation</span>
+              </div>
+              <div class="project-action-bar">
+                <div class="project-links">
+                  <!-- Note: Replace with custom URL if different -->
+                  <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="View Gadgetsorb project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>View Project</span>
+                  </a>
+                  <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="GitHub code for Gadgetsorb">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Code</span>
+                  </a>
+                </div>
+                <button class="btn btn-sm project-btn-details" data-case-study="gadgetsorb" type="button">
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span>Case Study</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Interactive Calculator & Converter -->
+          <article class="project-card reveal-fade-up" data-category="web-app" id="project-calculator">
+            <div class="project-image-box">
+              <span class="project-badge-overlay">JavaScript Architecture</span>
+              <img src="/images/project-calculator.svg" alt="Interactive Calculator web application preview" loading="lazy" width="600" height="360" />
+            </div>
+            <div class="project-content-box">
+              <h3 class="project-title">Web Utility Calculator</h3>
+              <p class="project-description">
+                A precision web calculator with complete keyboard input listeners, operator precedence evaluation, calculation history tape, and quick multi-currency exchange estimators built without libraries.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Vanilla JavaScript</span>
+                <span class="tech-tag">CSS Grid</span>
+                <span class="tech-tag">Keyboard A11y</span>
+                <span class="tech-tag">State Logic</span>
+              </div>
+              <div class="project-action-bar">
+                <div class="project-links">
+                  <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="View Calculator project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>View Project</span>
+                  </a>
+                  <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="GitHub code for Calculator">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Code</span>
+                  </a>
+                </div>
+                <button class="btn btn-sm project-btn-details" data-case-study="calculator" type="button">
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span>Case Study</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SKILLS SECTION
+         ====================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <div class="section-badge"><i class="fa-solid fa-screwdriver-wrench"></i> Competencies</div>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-description">A practical breakdown of the core technologies, developer tools, and best practices I apply to frontend projects.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Category 1: Frontend Development -->
+          <div class="skills-card reveal-fade-up">
+            <div class="skills-card-header">
+              <div class="skills-icon-box">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-brands fa-html5"></i> <span>HTML5</span></div>
+                <span class="skill-badge">Semantic Markup</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-brands fa-css3-alt"></i> <span>CSS3</span></div>
+                <span class="skill-badge">Flexbox &amp; Grid</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-brands fa-js"></i> <span>JavaScript</span></div>
+                <span class="skill-badge">ES6+ &amp; DOM API</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-mobile-screen"></i> <span>Responsive Design</span></div>
+                <span class="skill-badge">Mobile-First</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-wand-magic-sparkles"></i> <span>DOM Manipulation</span></div>
+                <span class="skill-badge">Dynamic Events</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Tools & Workflow -->
+          <div class="skills-card reveal-fade-up">
+            <div class="skills-card-header">
+              <div class="skills-icon-box">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <h3>Tools &amp; Workflow</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-brands fa-git-alt"></i> <span>Git</span></div>
+                <span class="skill-badge">Version Control</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-brands fa-github"></i> <span>GitHub</span></div>
+                <span class="skill-badge">Repositories &amp; CI</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-terminal"></i> <span>VS Code</span></div>
+                <span class="skill-badge">Primary IDE</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-brands fa-figma"></i> <span>Figma</span></div>
+                <span class="skill-badge">Design Handoff</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-cloud-arrow-up"></i> <span>Vercel</span></div>
+                <span class="skill-badge">Hosting &amp; Deploy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Additional Skills & UX -->
+          <div class="skills-card reveal-fade-up">
+            <div class="skills-card-header">
+              <div class="skills-icon-box">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>Additional Skills</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-palette"></i> <span>UI/UX Design</span></div>
+                <span class="skill-badge">Visual Hierarchy</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-gauge-high"></i> <span>Website Optimization</span></div>
+                <span class="skill-badge">Asset &amp; Speed</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-universal-access"></i> <span>Accessibility (a11y)</span></div>
+                <span class="skill-badge">ARIA &amp; Contrast</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-globe"></i> <span>Cross-Browser Testing</span></div>
+                <span class="skill-badge">Standard Compliance</span>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><i class="fa-solid fa-magnifying-glass"></i> <span>SEO Fundamentals</span></div>
+                <span class="skill-badge">Structured Meta</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EXPERIENCE SECTION
+         ====================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <div class="section-badge"><i class="fa-solid fa-timeline"></i> Track Record</div>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-description">A transparent record of my professional experience, development internships, and collaborative frontend projects.</p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- Role 1 -->
+          <div class="timeline-item reveal-fade-up">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role-group">
+                  <h3>Frontend Developer</h3>
+                  <span class="timeline-company">Creative Digital Agency • Remote</span>
+                </div>
+                <span class="timeline-period-badge">January 2025 – Present</span>
+              </div>
+              <ul class="timeline-responsibilities">
+                <li>Developed and maintained responsive, cross-browser web interfaces using semantic HTML5, modern CSS3, and JavaScript.</li>
+                <li>Collaborated with designers to translate high-fidelity Figma mockups into accessible, pixel-perfect web pages.</li>
+                <li>Audited and improved core web vitals, enhancing page load times and mobile rendering performance.</li>
+                <li>Engineered modular, reusable UI components ensuring consistent styling and maintainable architecture.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline-item reveal-fade-up">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role-group">
+                  <h3>Frontend Engineer Intern</h3>
+                  <span class="timeline-company">TechNova Solutions • Hybrid</span>
+                </div>
+                <span class="timeline-period-badge">August 2024 – December 2024</span>
+              </div>
+              <ul class="timeline-responsibilities">
+                <li>Built responsive landing pages and dashboard modules with a strict mobile-first approach.</li>
+                <li>Integrated frontend UI elements with backend REST endpoints to display dynamic data feeds.</li>
+                <li>Collaborated with senior engineers in code reviews, bug fixes, and usability improvements.</li>
+                <li>Contributed to styling guidelines and component libraries that standardized team code quality.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="timeline-item reveal-fade-up">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role-group">
+                  <h3>Web Developer</h3>
+                  <span class="timeline-company">Freelance &amp; Client Projects • Remote</span>
+                </div>
+                <span class="timeline-period-badge">2023 – Present</span>
+              </div>
+              <ul class="timeline-responsibilities">
+                <li>Designed and deployed custom portfolio websites, fashion landing pages, and business showcases for independent clients.</li>
+                <li>Authored clean, maintainable vanilla HTML/CSS/JS without relying on heavy frontend frameworks.</li>
+                <li>Optimized assets, image sizing, and CSS delivery for high-speed mobile loading across varying network conditions.</li>
+                <li>Managed project hosting, DNS setup, and deployment workflows on platforms like Vercel and GitHub Pages.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 4 -->
+          <div class="timeline-item reveal-fade-up">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role-group">
+                  <h3>UI &amp; Frontend Designer</h3>
+                  <span class="timeline-company">Code Vortex Academy • On-Site</span>
+                </div>
+                <span class="timeline-period-badge">March 2023 – July 2024</span>
+              </div>
+              <ul class="timeline-responsibilities">
+                <li>Prototyped clean user interfaces in Figma and developed them into fully functional, responsive HTML/CSS web templates.</li>
+                <li>Implemented smooth interactive elements and CSS transitions that improved user engagement.</li>
+                <li>Conducted responsive testing across multiple mobile viewports to ensure seamless user accessibility.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         WHAT I BRING TO A TEAM & VERIFIED TESTIMONIALS
+         ====================================================================== -->
+    <section class="section" id="value" style="background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <div class="section-badge"><i class="fa-solid fa-handshake"></i> Recruiter Value</div>
+          <h2 class="section-title">What I Bring to a Team</h2>
+          <p class="section-description">Concrete working principles and professional standards that make me a reliable, collaborative engineering asset.</p>
+        </div>
+
+        <div class="value-grid">
+          <div class="value-card reveal-fade-up">
+            <div class="value-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Clean &amp; Maintainable Code</h3>
+            <p>I write self-documenting, well-structured code adhering to modern standards, ensuring any developer can read, test, and build upon it effortlessly.</p>
+          </div>
+
+          <div class="value-card reveal-fade-up">
+            <div class="value-icon"><i class="fa-solid fa-mobile"></i></div>
+            <h3>Mobile-First Precision</h3>
+            <p>Every layout is architected from small screens upward. No horizontal scrolling, no overlapping buttons, and no unreadable typography.</p>
+          </div>
+
+          <div class="value-card reveal-fade-up">
+            <div class="value-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Problem-Solving Mindset</h3>
+            <p>When unexpected browser quirks or CSS bugs arise, I investigate root causes systematically rather than applying temporary hacks.</p>
+          </div>
+
+          <div class="value-card reveal-fade-up">
+            <div class="value-icon"><i class="fa-solid fa-gauge-simple-high"></i></div>
+            <h3>Performance &amp; Accessibility</h3>
+            <p>I build with page speed and accessibility in mind from day one, verifying contrast ratios, keyboard navigability, and lightweight asset footprints.</p>
+          </div>
+
+          <div class="value-card reveal-fade-up">
+            <div class="value-icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>Clear Communication</h3>
+            <p>I communicate project updates proactively, ask clarifying questions early, and collaborate respectfully with cross-functional team members.</p>
+          </div>
+
+          <div class="value-card reveal-fade-up">
+            <div class="value-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <h3>Rapid Learning Capacity</h3>
+            <p>Eager to absorb mentorship, master modern frameworks, adopt team conventions, and quickly deliver value on production codebases.</p>
+          </div>
+        </div>
+
+        <!-- Verified Client Feedback -->
+        <div class="section-header reveal-fade-up" style="margin-bottom: 36px;">
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-main);">Client &amp; Peer Feedback</h3>
+          <p class="section-description">Genuine testimonials from past client and collaborative engagements.</p>
+        </div>
+
+        <!-- Verified Client Feedback Container -->
+        <div class="testimonials-container reveal-fade-up">
+          <div class="testimonials-header-bar">
+            <div class="testimonials-badge">
+              <i class="fa-solid fa-comments"></i>
+              <span>Client &amp; Peer Reviews</span>
+            </div>
+            <div class="testimonials-rating-summary">
+              <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-text">5.0 / 5.0 Rating</span>
+            </div>
+          </div>
+
+          <div class="testimonials-row">
+            <div class="testimonial-card">
+              <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Adeyinka delivered a clean and responsive website for my business. Highly recommend his speed and attention to detail!"
+              </p>
+              <div class="testimonial-client">
+                <div class="client-avatar-placeholder">QK</div>
+                <div class="client-details">
+                  <h4>Quadri K.</h4>
+                  <span>Business Client</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Very fast and professional. The responsive design exceeded my expectations and works smoothly across every phone."
+              </p>
+              <div class="testimonial-client">
+                <div class="client-avatar-placeholder">MA</div>
+                <div class="client-details">
+                  <h4>Michael A.</h4>
+                  <span>Project Collaborator</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Great communication, receptive to feedback, and solid coding practices. Will definitely collaborate again on future web projects."
+              </p>
+              <div class="testimonial-client">
+                <div class="client-avatar-placeholder">DO</div>
+                <div class="client-details">
+                  <h4>David O.</h4>
+                  <span>Tech Client</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT SECTION
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <div class="section-badge"><i class="fa-solid fa-envelope"></i> Get In Touch</div>
+          <h2 class="section-title">Let's Build Together</h2>
+          <p class="section-description">Have an open frontend role, a contract project, or a technical inquiry? I would love to connect with you.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Left Info Card -->
+          <div class="contact-info-card reveal-fade-up">
+            <h3>Start a Conversation</h3>
+            <p>
+              I am currently available for junior frontend developer roles, contract opportunities, and remote web development positions. Whether you have a specific role or just want to connect, feel free to reach out.
+            </p>
+
+            <div class="contact-channels">
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">Email Address</span>
+                  <a href="mailto:adediranadeyinkaabdulquyum@gmail.com" class="channel-link">
+                    adediranadeyinkaabdulquyum@gmail.com
+                  </a>
+                </div>
+                <button class="copy-email-btn" id="copyEmailBtn" type="button" aria-label="Copy email address to clipboard">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">LinkedIn</span>
+                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="channel-link">
+                    linkedin.com/in/adediran-adeyinka
+                  </a>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">GitHub</span>
+                  <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="channel-link">
+                    github.com/Adeyinka75-Creator
+                  </a>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">Location &amp; Availability</span>
+                  <span class="channel-link" style="color: var(--text-muted);">
+                    Oyo State, Nigeria • Open to Remote Worldwide
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Contact Form -->
+          <div class="contact-form-container reveal-fade-up">
+            <form id="portfolioContactForm" class="contact-form" novalidate>
+              <div id="formFeedbackAlert" class="form-feedback-alert" role="alert" aria-live="polite"></div>
+
+              <div class="form-group">
+                <label for="contactName" class="form-label">Your Name <span>*</span></label>
+                <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Jane Doe" required />
+                <span class="field-error-msg">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address <span>*</span></label>
+                <input type="email" id="contactEmail" name="email" class="form-control" placeholder="e.g. jane@company.com" required />
+                <span class="field-error-msg">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject / Role</label>
+                <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="e.g. Frontend Developer Role / Web Project" />
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message <span>*</span></label>
+                <textarea id="contactMessage" name="message" class="form-control" placeholder="Tell me about the project, role, or timelines..." required></textarea>
+                <span class="field-error-msg">Please write a message with at least 10 characters.</span>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-primary" id="submitContactBtn">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </button>
+                <span class="form-note">
+                  <i class="fa-solid fa-shield-halved" style="color: var(--accent-cyan);"></i> Direct email dispatch
+                </span>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       CASE STUDY DETAIL MODAL DIALOG
+       ======================================================================== -->
+  <div class="modal-overlay" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-header-meta">
+          <span class="modal-badge" id="modalProjectBadge">Project Case Study</span>
+          <h3 class="modal-title" id="modalProjectTitle">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" type="button" aria-label="Close project case study modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-preview-image">
+          <img src="/images/project-dynasty.jpg" alt="Project preview screenshot" id="modalProjectImage" width="700" height="380" referrerPolicy="no-referrer" />
+        </div>
+
+        <div class="case-study-grid">
+          <div class="case-study-item">
+            <h5>My Role</h5>
+            <p id="modalProjectRole">Frontend Developer &amp; UI Designer</p>
+          </div>
+          <div class="case-study-item">
+            <h5>Timeline &amp; Scope</h5>
+            <p id="modalProjectTimeline">2 Weeks • Web Showcase</p>
+          </div>
+        </div>
+
+        <div class="case-study-section">
+          <h4><i class="fa-solid fa-circle-info"></i> Project Overview</h4>
+          <p id="modalProjectOverview">Detailed overview text...</p>
+        </div>
+
+        <div class="case-study-section">
+          <h4><i class="fa-solid fa-bullseye"></i> Problem &amp; Purpose</h4>
+          <p id="modalProjectProblem">Problem statement...</p>
+        </div>
+
+        <div class="case-study-section">
+          <h4><i class="fa-solid fa-layer-group"></i> Technologies &amp; Architecture</h4>
+          <div class="project-tech-tags" id="modalProjectTech">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div class="case-study-section">
+          <h4><i class="fa-solid fa-list-check"></i> Key Features Implemented</h4>
+          <ul class="case-study-list" id="modalProjectFeatures">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <div class="case-study-section">
+          <h4><i class="fa-solid fa-triangle-exclamation"></i> Engineering Challenges &amp; Solutions</h4>
+          <p id="modalProjectChallenges">Challenge description...</p>
+        </div>
+
+        <div class="case-study-section">
+          <h4><i class="fa-solid fa-lightbulb"></i> What I Learned</h4>
+          <p id="modalProjectLearnings">Learnings description...</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modalLiveLink">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <span>Open Live Project</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" id="modalGithubLink">
+          <i class="fa-brands fa-github"></i>
+          <span>Source Code</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="brand-badge">AA</div>
+            <span>Adeyinka</span>
+          </div>
+          <p>
+            Frontend Developer dedicated to building responsive, modern, and accessible web experiences with clean HTML5, CSS3, and vanilla JavaScript.
+          </p>
+          <div class="hero-social-icons">
+            <a href="https://github.com/Adeyinka75-Creator" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:adediranadeyinkaabdulquyum@gmail.com" class="hero-social-link" aria-label="Send Email">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Core Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="#projects">Responsive Web Design</a></li>
+            <li><a href="#projects">Frontend Development</a></li>
+            <li><a href="#about">Figma to HTML/CSS</a></li>
+            <li><a href="#skills">Performance Optimization</a></li>
+            <li><a href="#skills">Web Accessibility</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact-info">
+          <h4>Direct Contact</h4>
+          <p><i class="fa-solid fa-envelope"></i> adediranadeyinkaabdulquyum@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +234 9020394751</p>
+          <p><i class="fa-solid fa-location-dot"></i> Oyo State, Nigeria (Remote)</p>
+          <p><i class="fa-solid fa-clock"></i> Available for Full-Time &amp; Contracts</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Adediran Adeyinka. All rights reserved. Handcrafted with semantic HTML5, CSS3, and Vanilla JavaScript.</p>
+        <button class="back-to-top-btn" id="backToTopBtn" type="button" aria-label="Scroll back to top">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Theme Switcher -->
+  <button class="floating-theme-toggle" id="floatingThemeToggle" type="button" aria-label="Toggle dark and light theme" title="Switch between Dark and Light mode">
+    <i class="fa-solid fa-sun" id="floatingThemeIcon" aria-hidden="true"></i>
+    <span id="floatingThemeText">Light Mode</span>
+  </button>
+
+  <!-- Vanilla Client Script -->
+  <script src="/js/script.js" defer></script>
+</body>
+</html>

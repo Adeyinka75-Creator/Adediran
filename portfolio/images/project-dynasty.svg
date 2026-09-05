@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <defs>
+    <linearGradient id="dynastyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="50%" stop-color="#121215" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <linearGradient id="goldAcc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#27272a" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="600" height="360" fill="url(#dynastyBg)" />
+  
+  <!-- Browser Chrome / Frame -->
+  <rect x="20" y="16" width="560" height="328" rx="12" fill="#18181b" stroke="#27272a" stroke-width="1.5" />
+  <rect x="20" y="16" width="560" height="36" rx="12" fill="#202024" />
+  <circle cx="42" cy="34" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="58" cy="34" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="74" cy="34" r="5" fill="#10b981" opacity="0.8" />
+  <rect x="110" y="24" width="280" height="20" rx="6" fill="#121215" />
+  <text x="125" y="38" fill="#71717a" font-family="monospace" font-size="11">dynasty-fashion-designer.vercel.app</text>
+
+  <!-- Fashion Store UI Header -->
+  <g transform="translate(44, 68)">
+    <text x="0" y="22" fill="#ffffff" font-family="'Didot', 'Playfair Display', serif" font-size="20" font-weight="700" letter-spacing="3">DYNASTY</text>
+    <text x="96" y="22" fill="#a1a1aa" font-family="sans-serif" font-size="10" letter-spacing="1">HAUTE COUTURE</text>
+    <line x1="420" y1="18" x2="512" y2="18" stroke="#3f3f46" stroke-width="1" />
+    <text x="440" y="14" fill="#a1a1aa" font-family="sans-serif" font-size="11">BAG (02)</text>
+  </g>
+
+  <!-- Left Editorial Feature -->
+  <g transform="translate(44, 110)">
+    <rect width="240" height="210" rx="8" fill="url(#cardGrad)" stroke="#3f3f46" stroke-width="1" />
+    <!-- Abstract silhouette of high fashion coat -->
+    <path d="M 90 200 L 120 70 L 150 200 Z" fill="#3f3f46" opacity="0.7"/>
+    <path d="M 120 70 L 105 110 L 135 110 Z" fill="url(#goldAcc)" opacity="0.9"/>
+    <rect x="20" y="20" width="70" height="20" rx="4" fill="#09090b" opacity="0.8"/>
+    <text x="28" y="34" fill="#fbbf24" font-family="sans-serif" font-size="10" font-weight="600">NEW ARRIVAL</text>
+    <text x="20" y="165" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="600">Minimalist Wool Trench</text>
+    <text x="20" y="185" fill="#e4e4e7" font-family="sans-serif" font-size="13" font-weight="700">$385.00</text>
+  </g>
+
+  <!-- Right Side Grid Items -->
+  <g transform="translate(304, 110)">
+    <!-- Item 1 -->
+    <rect width="120" height="98" rx="6" fill="#202024" stroke="#27272a" stroke-width="1" />
+    <circle cx="60" cy="45" r="22" fill="#27272a" />
+    <text x="12" y="86" fill="#d4d4d8" font-family="sans-serif" font-size="11" font-weight="500">Silk Blazer</text>
+    
+    <!-- Item 2 -->
+    <rect x="135" width="120" height="98" rx="6" fill="#202024" stroke="#27272a" stroke-width="1" />
+    <circle cx="195" cy="45" r="22" fill="#27272a" />
+    <text x="147" y="86" fill="#d4d4d8" font-family="sans-serif" font-size="11" font-weight="500">Tailored Trouser</text>
+
+    <!-- Bottom Banner / CTA -->
+    <rect y="112" width="255" height="98" rx="6" fill="#1c1917" stroke="#78350f" stroke-width="1" />
+    <text x="16" y="142" fill="#fef3c7" font-family="'Didot', serif" font-size="15" font-weight="600">The 2026 Collection</text>
+    <text x="16" y="164" fill="#a8a29e" font-family="sans-serif" font-size="11">Understated elegance in bespoke craftsmanship.</text>
+    <rect x="16" y="176" width="105" height="22" rx="4" fill="url(#goldAcc)" />
+    <text x="28" y="191" fill="#000000" font-family="sans-serif" font-size="10" font-weight="700">EXPLORE LOOKS</text>
+  </g>
+</svg>
