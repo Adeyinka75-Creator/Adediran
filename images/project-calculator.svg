@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360">
+  <defs>
+    <linearGradient id="calcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="opBtnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="360" fill="url(#calcBg)" />
+
+  <!-- App Window Frame -->
+  <rect x="20" y="16" width="560" height="328" rx="12" fill="#0b0f19" stroke="#1f2937" stroke-width="1.5" />
+  
+  <!-- Browser Chrome -->
+  <rect x="20" y="16" width="560" height="36" rx="12" fill="#161f30" />
+  <circle cx="42" cy="34" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="58" cy="34" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="74" cy="34" r="5" fill="#10b981" opacity="0.8" />
+  <rect x="110" y="24" width="280" height="20" rx="6" fill="#0b0f19" />
+  <text x="125" y="38" fill="#64748b" font-family="monospace" font-size="11">adeyinka-calculator.vercel.app</text>
+
+  <!-- Calculator Unit (Center Left) -->
+  <g transform="translate(60, 68)">
+    <rect width="260" height="258" rx="12" fill="#131b2e" stroke="#1e293b" stroke-width="1" />
+    
+    <!-- OLED Digital Screen -->
+    <rect x="15" y="14" width="230" height="56" rx="6" fill="#070a12" stroke="#1e293b" stroke-width="1" />
+    <text x="235" y="32" fill="#64748b" font-family="monospace" font-size="11" text-anchor="end">(1,250 × 1.15) + 420 =</text>
+    <text x="235" y="58" fill="#38bdf8" font-family="monospace" font-size="22" font-weight="700" text-anchor="end">1,857.50</text>
+
+    <!-- Keypad Grid -->
+    <!-- Row 1 -->
+    <g transform="translate(15, 80)">
+      <rect width="52" height="36" rx="6" fill="#1e293b" />
+      <text x="26" y="23" fill="#f87171" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">AC</text>
+
+      <rect x="59" width="52" height="36" rx="6" fill="#1e293b" />
+      <text x="85" y="23" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">±</text>
+
+      <rect x="118" width="52" height="36" rx="6" fill="#1e293b" />
+      <text x="144" y="23" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">%</text>
+
+      <rect x="177" width="52" height="36" rx="6" fill="url(#opBtnGrad)" />
+      <text x="203" y="23" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle">÷</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(15, 122)">
+      <rect width="52" height="36" rx="6" fill="#192238" />
+      <text x="26" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle">7</text>
+
+      <rect x="59" width="52" height="36" rx="6" fill="#192238" />
+      <text x="85" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle">8</text>
+
+      <rect x="118" width="52" height="36" rx="6" fill="#192238" />
+      <text x="144" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle">9</text>
+
+      <rect x="177" width="52" height="36" rx="6" fill="url(#opBtnGrad)" />
+      <text x="203" y="23" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle">×</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(15, 164)">
+      <rect width="52" height="36" rx="6" fill="#192238" />
+      <text x="26" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle">4</text>
+
+      <rect x="59" width="52" height="36" rx="6" fill="#192238" />
+      <text x="85" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle">5</text>
+
+      <rect x="118" width="52" height="36" rx="6" fill="#192238" />
+      <text x="144" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle">6</text>
+
+      <rect x="177" width="52" height="36" rx="6" fill="url(#opBtnGrad)" />
+      <text x="203" y="23" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle">−</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(15, 206)">
+      <rect width="111" height="36" rx="6" fill="#192238" />
+      <text x="55" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle">0</text>
+
+      <rect x="118" width="52" height="36" rx="6" fill="#192238" />
+      <text x="144" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle">.</text>
+
+      <rect x="177" width="52" height="36" rx="6" fill="#10b981" />
+      <text x="203" y="23" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle">=</text>
+    </g>
+  </g>
+
+  <!-- Right: Calculation Tape & Currency Converter Preview -->
+  <g transform="translate(340, 68)">
+    <rect width="200" height="120" rx="8" fill="#131b2e" stroke="#1e293b" stroke-width="1" />
+    <text x="16" y="24" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600">Computation History Tape</text>
+    <text x="16" y="50" fill="#64748b" font-family="monospace" font-size="10">250 × 12 =</text>
+    <text x="184" y="50" fill="#cbd5e1" font-family="monospace" font-size="10" text-anchor="end">3,000.00</text>
+    <text x="16" y="74" fill="#64748b" font-family="monospace" font-size="10">3,000 − 15% =</text>
+    <text x="184" y="74" fill="#cbd5e1" font-family="monospace" font-size="10" text-anchor="end">2,550.00</text>
+    <text x="16" y="98" fill="#64748b" font-family="monospace" font-size="10">2,550 ÷ 2 =</text>
+    <text x="184" y="98" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700" text-anchor="end">1,275.00</text>
+
+    <!-- Currency module -->
+    <g transform="translate(0, 134)">
+      <rect width="200" height="124" rx="8" fill="#131b2e" stroke="#1e293b" stroke-width="1" />
+      <text x="16" y="24" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="600">Quick FX Exchange</text>
+      <rect x="16" y="38" width="168" height="32" rx="4" fill="#0b0f19" />
+      <text x="26" y="58" fill="#f8fafc" font-family="monospace" font-size="12">$ 100 USD</text>
+      <text x="170" y="58" fill="#38bdf8" font-family="sans-serif" font-size="12" text-anchor="end">⇄</text>
+      <rect x="16" y="78" width="168" height="32" rx="4" fill="#0b0f19" />
+      <text x="26" y="98" fill="#10b981" font-family="monospace" font-size="12">₦ 152,400 NGN</text>
+    </g>
+  </g>
+</svg>
